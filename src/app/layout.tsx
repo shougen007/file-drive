@@ -7,13 +7,14 @@ import {
   UserButton
 } from '@clerk/nextjs'
 import './globals.css'
+import ConvexClientProvider from './ConvexClientProvider'
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ConvexClientProvider>
       <html lang="en">
         <body>
           <SignedOut>
@@ -25,6 +26,6 @@ export default function RootLayout({
           {children}
         </body>
       </html>
-    </ClerkProvider>
+    </ConvexClientProvider>
   )
 }
