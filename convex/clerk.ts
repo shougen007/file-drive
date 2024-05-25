@@ -15,17 +15,4 @@ export const fulfill = internalAction({
     const payload = wh.verify(args.payload, args.headers) as WebhookEvent;
     return payload;
   },
-/*
-  users: defineTable({
-    tokenIdentifier: v.string(),
-    name: v.optional(v.string()),
-    image: v.optional(v.string()),
-    orgIds: v.array(
-      v.object({
-        orgId: v.string(),
-        role: roles,
-      })
-    ),
-  }).index("by_tokenIdentifier", ["tokenIdentifier"]),
-  */
 });
