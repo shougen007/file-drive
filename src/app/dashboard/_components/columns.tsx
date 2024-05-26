@@ -36,13 +36,13 @@ export const columns: ColumnDef<
   },
   {
     header: "User",
-    cell: ({ row }) => {
+    cell: ({ row } : { row:any }) => {
       return <UserCell userId={row.original.userId} />;
     },
   },
   {
     header: "Uploaded On",
-    cell: ({ row }) => {
+    cell: ({ row } : { row:any }) => {
       return (
         <div>
           {formatRelative(new Date(row.original._creationTime), new Date())}
@@ -52,7 +52,7 @@ export const columns: ColumnDef<
   },
   {
     header: "Actions",
-    cell: ({ row }) => {
+    cell: ({ row } : { row:any }) => {
       return (
         <div>
           <FileCardActions
